@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-//! Controlled Component
-
 class SearchBar extends Component {
   state = { term: "" };
 

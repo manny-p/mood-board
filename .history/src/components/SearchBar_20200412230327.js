@@ -1,20 +1,13 @@
 import React, { Component } from "react";
 
-//! Controlled Component
-
 class SearchBar extends Component {
-  state = { term: "" };
-
   render() {
     return (
       <div>
         <form>
           <label>Image Search</label>
-          <input
-            type='text'
-            onChange={e => this.setState({ term: e.target.value })}
-            value={console.log(this.state.term)}
-          />
+          <input type='text' 
+          >
         </form>
       </div>
     );

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-//! Controlled Component
-
 class SearchBar extends Component {
-  state = { term: "" };
+  onInputClick(e) {
+    console.log("Input was clicked");
+  }
 
   render() {
     return (
@@ -12,8 +12,8 @@ class SearchBar extends Component {
           <label>Image Search</label>
           <input
             type='text'
-            onChange={e => this.setState({ term: e.target.value })}
-            value={console.log(this.state.term)}
+            onClick={this.onInputClick}
+            onChange={e => console.log(e.target.value)}
           />
         </form>
       </div>

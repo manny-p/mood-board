@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 
-//! Controlled Component
-
 class SearchBar extends Component {
   state = { term: "" };
-
   render() {
     return (
       <div>
@@ -13,7 +10,7 @@ class SearchBar extends Component {
           <input
             type='text'
             onChange={e => this.setState({ term: e.target.value })}
-            value={console.log(this.state.term)}
+            value={this.state.term}
           />
         </form>
       </div>
