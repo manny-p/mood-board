@@ -17,9 +17,8 @@ class SearchBar extends Component {
           <input
             type='text'
             onClick={this.onInputClick}
-            //TODO refactor
-            //onChange={this.onInputChange}
-            onChange={event => console.log(event.target.value)}
+            onChange={(event)=> }
+            // onChange={this.onInputChange}
           />
         </form>
       </div>

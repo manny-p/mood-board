@@ -4,11 +4,11 @@ import ImageList from "./ImageList";
 
 const App = () => {
   return (
-    <div>
-      <SearchBar />
-      <ImageList />
-    </div>
+    <SearchBar />
+<ImageList />
+
   );
+
 };
 
 export default App;

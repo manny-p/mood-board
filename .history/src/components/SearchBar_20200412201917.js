@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 class SearchBar extends Component {
-  onInputChange(event) {
-    console.log(event.target.value);
+  onInputChange(e) {
+    console.log(e.target.value);
   }
 
   onInputClick(e) {
@@ -17,9 +17,7 @@ class SearchBar extends Component {
           <input
             type='text'
             onClick={this.onInputClick}
-            //TODO refactor
-            //onChange={this.onInputChange}
-            onChange={event => console.log(event.target.value)}
+            onChange={e => this.OnInputChange}
           />
         </form>
       </div>

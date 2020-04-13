@@ -15,11 +15,9 @@ class SearchBar extends Component {
         <form>
           <label>Image Search</label>
           <input
-            type='text'
+            type="text"
             onClick={this.onInputClick}
-            //TODO refactor
-            //onChange={this.onInputChange}
-            onChange={event => console.log(event.target.value)}
+            onChange={e => this.OnInputChange}
           />
         </form>
       </div>
