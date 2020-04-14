@@ -5,18 +5,19 @@ class SearchBar extends Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
-
     console.log(this.state.term);
   };
 
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
+        {/* event handler, prop onSubmit */}
+        <form onSubmit={() => this.onFormSubmit()}>
+          {/* onFormSubmit is a callback method */}
           <label>Image Search</label>
           <input
             type='text'
-            value={this.state.term}
+            value={console.log(this.state.term)}
             onChange={(e) => this.setState({ term: e.target.value })}
           />
         </form>

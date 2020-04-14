@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 
+//! Controlled Component
+
 class SearchBar extends Component {
   state = { term: "" };
-
-  onFormSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(this.state.term);
-  };
 
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
+        <form>
           <label>Image Search</label>
           <input
             type='text'
-            value={this.state.term}
+            value={console.log(this.state.term)}
             onChange={(e) => this.setState({ term: e.target.value })}
           />
         </form>
