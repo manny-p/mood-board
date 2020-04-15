@@ -3,14 +3,10 @@ import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
 
 class App extends Component {
-  onSearchSubmit = (term) => {
-    console.log(term);
-  };
-
   render() {
     return (
       <div>
-        <SearchBar onSubmit={this.onSearchSubmit} />
+        <SearchBar />
         <ImageList />
       </div>
     );

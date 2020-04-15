@@ -6,7 +6,11 @@ class SearchBar extends Component {
   onFormSubmit = (e) => {
     e.preventDefault();
 
-    this.props.onSubmit(this.state.term);
+    // this.props.onSubmit(this.state.term);
+    // props object: calls function that is passed through as onSubmit prop
+    // onSubmit={this.onSearchSubmit}
+
+    //function is invoked with this.state.term
   };
 
   render() {
@@ -16,6 +20,7 @@ class SearchBar extends Component {
           <label>Image Search</label>
           <input
             type='text'
+            value={this.state.term}
             onChange={(e) => this.setState({ term: e.target.value })}
           />
         </form>
