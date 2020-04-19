@@ -5,7 +5,7 @@ import ImageList from "./ImageList";
 
 class App extends Component {
   state = { images: [] };
-  onSearchSubmit = async term => {
+   onSearchSubmit = (term) =>{
     const response = await axios.get("https://api.unsplash.com/search/photos", {
       params: { query: term },
       headers: {
@@ -13,7 +13,7 @@ class App extends Component {
       }
     });
     this.setState({ images: response.data.results });
-  };
+  }
 
   render() {
     return (
