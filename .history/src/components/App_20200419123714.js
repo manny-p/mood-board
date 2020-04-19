@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='ui container' style={{ marginTop: "10px" }}>
+      <div className='ui container'>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList />
       </div>
