@@ -5,7 +5,7 @@ const ImageList = props => {
     return <img src={image.urls.regular} />;
   });
 
-  return <div>{images}</div>;
+  return <div>ImageList</div>;
 };
 
 export default ImageList;
