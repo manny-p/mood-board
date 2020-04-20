@@ -171,7 +171,7 @@ export default function PrimarySearchAppBar() {
             color='inherit'
             aria-label='open drawer'
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
           <Typography className={classes.title} variant='h6' noWrap>
             Mood Board

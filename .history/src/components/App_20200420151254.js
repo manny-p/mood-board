@@ -28,7 +28,7 @@ class App extends Component {
           <div style={{ marginTop: "20px" }}>
             <SearchBarVideo />
           </div>
-          <div style={{ marginTop: "35px" }}>
+          <div style={{ marginTop: "30px" }}>
             <Footer />
           </div>
         </div>
