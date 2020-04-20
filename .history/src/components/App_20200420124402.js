@@ -3,7 +3,7 @@ import unsplash from "../api/unsplash";
 import PrimarySearchAppBar from "./PrimarySearchAppBar";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
-import Footer from "./Footer";
+import ImageAvatar from "./ImageAvatar";
 
 class App extends Component {
   state = { images: [] };
@@ -18,12 +18,13 @@ class App extends Component {
   };
 
   render() {
+    debugger;
     return (
       <div className='ui container' style={{ marginTop: "20px" }}>
         <PrimarySearchAppBar />
+        <ImageAvatar />
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
-        <Footer />
       </div>
     );
   }

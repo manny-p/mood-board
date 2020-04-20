@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SearchBar extends Component {
+class AppBar extends Component {
   state = { term: "" };
 
   onFormSubmit = e => {
@@ -11,10 +11,10 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='ui raised segment'>
+      <div className='ui segment' style={{ color: "@red" }}>
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
-            <label>Search</label>
+            <label>Discover</label>
             <input
               type='text'
               onChange={e => this.setState({ term: e.target.value })}
@@ -25,4 +25,4 @@ class SearchBar extends Component {
     );
   }
 }
-export default SearchBar;
+export default AppBar;

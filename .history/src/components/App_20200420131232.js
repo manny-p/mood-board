@@ -23,7 +23,6 @@ class App extends Component {
         <PrimarySearchAppBar />
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
-        <Footer />
       </div>
     );
   }

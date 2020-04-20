@@ -11,7 +11,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='ui raised segment'>
+      <div className='ui segment' style={{ color: "@red" }}>
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
             <label>Search</label>
