@@ -6,7 +6,10 @@ class ImageCard extends Component {
 
     return (
       <div>
-        <img alt={description} src={urls.regualr} />
+        <img
+          alt={this.props.image.description}
+          src={this.props.image.urls.regualr}
+        />
       </div>
     );
   }
