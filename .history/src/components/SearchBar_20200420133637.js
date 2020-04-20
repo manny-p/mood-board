@@ -3,11 +3,11 @@ import React, { Component } from "react";
 class SearchBar extends Component {
   state = { term: "" };
 
-  onFormSubmit = (e) => {
-    e.preventDefault();
+  // onFormSubmit = (e) => {
+  //   e.preventDefault();
 
-    this.props.onSubmit(this.state.term);
-  };
+  //   this.props.onSubmit(this.state.term);
+  // };
 
   render() {
     return (
@@ -17,7 +17,8 @@ class SearchBar extends Component {
             <label>Image Search</label>
             <input
               type='text'
-              onChange={(e) => this.setState({ term: e.target.value })}
+              value={this.state.term}
+              // onChange={(e) => this.setState({ term: e.target.value })}
             />
           </div>
         </form>

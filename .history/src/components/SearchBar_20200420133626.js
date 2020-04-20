@@ -17,7 +17,8 @@ class SearchBar extends Component {
             <label>Image Search</label>
             <input
               type='text'
-              onChange={(e) => this.setState({ term: e.target.value })}
+              value={this.state.term}
+              // onChange={(e) => this.setState({ term: e.target.value })}
             />
           </div>
         </form>

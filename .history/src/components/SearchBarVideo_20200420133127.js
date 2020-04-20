@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SearchBar extends Component {
+class SearchBarVideo extends Component {
   state = { term: "" };
 
   onFormSubmit = (e) => {
@@ -11,10 +11,11 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='ui raised segment'>
+      <div className='search-bar ui segment'>
+      // <div className='ui raised segment'>
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
-            <label>Image Search</label>
+            <label>Search Video</label>
             <input
               type='text'
               onChange={(e) => this.setState({ term: e.target.value })}
@@ -25,4 +26,4 @@ class SearchBar extends Component {
     );
   }
 }
-export default SearchBar;
+export default SearchBarVideo;

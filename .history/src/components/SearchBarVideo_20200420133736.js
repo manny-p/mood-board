@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 
-class SearchBar extends Component {
+class SearchBarVideo extends Component {
   state = { term: "" };
 
-  onFormSubmit = (e) => {
-    e.preventDefault();
+  // onFormSubmit = (e) => {
+  //   e.preventDefault();
 
-    this.props.onSubmit(this.state.term);
-  };
+  //   this.props.onSubmit(this.state.term);
+  // };
 
   render() {
     return (
       <div className='ui raised segment'>
+        {/* <div className='search-bar ui segment'> */}
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
-            <label>Image Search</label>
+            <label>Video Search</label>
             <input
               type='text'
-              onChange={(e) => this.setState({ term: e.target.value })}
+              // onChange={(e) => this.setState({ term: e.target.value })}
             />
           </div>
         </form>
@@ -25,4 +26,4 @@ class SearchBar extends Component {
     );
   }
 }
-export default SearchBar;
+export default SearchBarVideo;

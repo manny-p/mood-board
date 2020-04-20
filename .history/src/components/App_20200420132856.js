@@ -23,7 +23,6 @@ class App extends Component {
       <div className='ui container' style={{ marginTop: "20px" }}>
         <PrimarySearchAppBar />
         <SearchBar onSubmit={this.onSearchSubmit} />
-        <SearchBarVideo />
         <ImageList images={this.state.images} />
         <Footer />
       </div>
