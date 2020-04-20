@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import unsplash from "../api/unsplash";
-import AppBar from "./AppBar";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
 
@@ -16,11 +15,10 @@ class App extends Component {
     this.setState({ images: response.data.results });
   };
 
+  debugger;
   render() {
-    debugger;
     return (
-      <div className='ui container' style={{ marginTop: "20px" }}>
-        <AppBar></AppBar>
+      <div className='ui container' style={{ marginTop: "10px" }}>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
       </div>

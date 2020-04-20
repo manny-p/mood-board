@@ -20,7 +20,6 @@ class App extends Component {
     debugger;
     return (
       <div className='ui container' style={{ marginTop: "20px" }}>
-        <AppBar></AppBar>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
       </div>

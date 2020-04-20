@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
 import unsplash from "../api/unsplash";
-import AppBar from "./AppBar";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
 
@@ -20,7 +22,6 @@ class App extends Component {
     debugger;
     return (
       <div className='ui container' style={{ marginTop: "20px" }}>
-        <AppBar></AppBar>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <ImageList images={this.state.images} />
       </div>
