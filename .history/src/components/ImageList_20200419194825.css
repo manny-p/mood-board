@@ -8,3 +8,7 @@
 .image-list img {
   width: 250px;
 }
+
+.ui-segment {
+  color: red;
+}

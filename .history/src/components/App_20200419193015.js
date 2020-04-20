@@ -7,11 +7,11 @@ class App extends Component {
   state = { images: [] };
 
   onSearchSubmit = async term => {
-    // debugger;
     const response = await unsplash.get("/search/photos", {
+      debugger
       params: { query: term }
     });
-    // debugger;
+    debugger
     this.setState({ images: response.data.results });
   };
 

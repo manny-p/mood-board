@@ -11,10 +11,10 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='ui segment' style={{ color: "@red" }}>
+      <div className='ui segment'>
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
-            <label>Discover</label>
+            <label>Image Search</label>
             <input
               type='text'
               onChange={e => this.setState({ term: e.target.value })}
