@@ -27,7 +27,9 @@ class App extends Component {
         part: "snippet",
         maxResults: 5,
         type: "video",
-        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
+        key: KEY
+       
+        }
       }
     });
   };

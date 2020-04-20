@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { render } from "@testing-library/react";
 
 class SearchBarVideo extends Component {
   state = { term: "" };
 
   onInputChange = event => {
-    this.setState({ term: event.target.value });
+    this.setState({ term: event.targetvalue });
   };
 
   onFormSubmit = event => {

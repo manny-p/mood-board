@@ -22,13 +22,8 @@ class App extends Component {
   onTermSubmit = term => {
     // console.log(term);
     youtube.get("/search", {
-      params: {
-        q: term,
-        part: "snippet",
-        maxResults: 5,
-        type: "video",
-        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
-      }
+      q: term
+    }
     });
   };
 

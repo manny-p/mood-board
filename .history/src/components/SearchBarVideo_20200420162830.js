@@ -1,17 +1,20 @@
 import React, { Component } from "react";
+import { render } from "@testing-library/react";
 
 class SearchBarVideo extends Component {
   state = { term: "" };
 
   onInputChange = event => {
-    this.setState({ term: event.target.value });
+    this.setState({ term: event.targetvalue });
   };
 
   onFormSubmit = event => {
     event.preventDefault();
 
+    this.props.onFormSubmit={this.state.term};
+
+
     //TODO call callback from parent component
-    this.props.onFormSubmit(this.state.term);
   };
 
   render() {

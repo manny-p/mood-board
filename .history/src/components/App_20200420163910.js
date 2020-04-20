@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import unsplash from "../api/unsplash";
-import youtube from "../api/youtube";
 import PrimarySearchAppBar from "./PrimarySearchAppBar";
 import SearchBar from "./SearchBar";
 import SearchBarVideo from "./SearchBarVideo";
@@ -12,24 +11,17 @@ class App extends Component {
 
   //*Search Images
   onSearchSubmit = async term => {
+    console.log(term);
     const response = await unsplash.get("/search/photos", {
       params: { query: term }
     });
+
     this.setState({ images: response.data.results });
   };
 
   //*Search Videos
   onTermSubmit = term => {
-    // console.log(term);
-    youtube.get("/search", {
-      params: {
-        q: term,
-        part: "snippet",
-        maxResults: 5,
-        type: "video",
-        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
-      }
-    });
+    console.log(term);
   };
 
   render() {

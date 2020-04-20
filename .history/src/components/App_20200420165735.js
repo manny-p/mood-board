@@ -18,6 +18,8 @@ class App extends Component {
     this.setState({ images: response.data.results });
   };
 
+  const KEY = "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I";
+  
   //*Search Videos
   onTermSubmit = term => {
     // console.log(term);
@@ -27,7 +29,7 @@ class App extends Component {
         part: "snippet",
         maxResults: 5,
         type: "video",
-        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
+        key: KEY
       }
     });
   };
