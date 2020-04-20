@@ -20,16 +20,23 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <PrimarySearchAppBar />
+      <div className='ui container' style={{ marginTop: "20px" }}>
+        <div class='ui vertically divided grid'>
+          <div class='three column row'>
+            <div class='column'>
+              <PrimarySearchAppBar />
+              <SearchBar onSubmit={this.onSearchSubmit} />
+              <ImageList images={this.state.images} />
+            </div>
 
-        <div className='ui container' style={{ marginTop: "20px" }}>
-          <SearchBar onSubmit={this.onSearchSubmit} />
-          <ImageList images={this.state.images} />
-          <SearchBarVideo />
-        </div>
-        <div style={{ marginTop: "35vh" }}>
-          <Footer />
+            <div class='column'>
+              <SearchBarVideo />
+            </div>
+
+            <div class='column'>
+              <Footer />
+            </div>
+          </div>
         </div>
       </div>
     );

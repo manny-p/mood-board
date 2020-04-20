@@ -28,7 +28,10 @@ class App extends Component {
           <ImageList images={this.state.images} />
           <SearchBarVideo />
         </div>
-        <div style={{ marginTop: "35vh" }}>
+
+        <div style={{ marginTop: "50px" }}></div>
+
+        <div style={{ marginTop: "33vh" }}>
           <Footer />
         </div>
       </div>

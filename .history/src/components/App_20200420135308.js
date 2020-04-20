@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import SearchBarVideo from "./SearchBarVideo";
 import ImageList from "./ImageList";
 import Footer from "./Footer";
+import Toolbar from "@material-ui/core/Toolbar";
 
 class App extends Component {
   state = { images: [] };
@@ -20,17 +21,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='ui container' style={{ marginTop: "20px" }}>
         <PrimarySearchAppBar />
-
-        <div className='ui container' style={{ marginTop: "20px" }}>
-          <SearchBar onSubmit={this.onSearchSubmit} />
-          <ImageList images={this.state.images} />
-          <SearchBarVideo />
-        </div>
-        <div style={{ marginTop: "35vh" }}>
-          <Footer />
-        </div>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+        <SearchBarVideo />
+        <ImageList images={this.state.images} />
+        <AppBar />
       </div>
     );
   }

@@ -20,15 +20,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <PrimarySearchAppBar />
-
-        <div className='ui container' style={{ marginTop: "20px" }}>
+      <div className='ui container' style={{ marginTop: "20px" }}>
+        <div>
+          <PrimarySearchAppBar />
           <SearchBar onSubmit={this.onSearchSubmit} />
           <ImageList images={this.state.images} />
           <SearchBarVideo />
         </div>
-        <div style={{ marginTop: "35vh" }}>
+        <div>
           <Footer />
         </div>
       </div>
