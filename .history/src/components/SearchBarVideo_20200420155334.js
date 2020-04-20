@@ -10,6 +10,7 @@ class SearchBarVideo extends Component {
 
   onFormSubmit = event => {
     event.preventDefault();
+
     //TODO call callback from parent component
   };
 

@@ -1,21 +1,25 @@
 import React, { Component } from "react";
-import { render } from "@testing-library/react";
 
 class SearchBarVideo extends Component {
   state = { term: "" };
 
-  onInputChange = event => {
-    this.setState({ term: event.targetvalue });
+  onInputChange = (event) => {};
+  this.ListeningStateChangedEvent({term: event.target})
+
+  /*
+  onFormSubmit = (e) => {
+   e.preventDefault();
+
+    this.props.onSubmit(this.state.term);
   };
 
-  onFormSubmit = event => {
-    event.preventDefault();
-    //TODO call callback from parent component
-  };
+
+/*
 
   render() {
     return (
-      <div className='search-bar ui segment'>
+      <div className='ui raised segment'>
+        {/* <div className='search-bar ui segment'> */}
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
             <label>Video Search</label>
@@ -23,6 +27,7 @@ class SearchBarVideo extends Component {
               type='text'
               value={this.state.term}
               onChange={this.onInputChange}
+              // onChange={(e) => this.setState({ term: e.target.value })}
             />
           </div>
         </form>
@@ -30,5 +35,4 @@ class SearchBarVideo extends Component {
     );
   }
 }
-
 export default SearchBarVideo;

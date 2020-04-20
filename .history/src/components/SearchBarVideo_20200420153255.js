@@ -4,18 +4,23 @@ import { render } from "@testing-library/react";
 class SearchBarVideo extends Component {
   state = { term: "" };
 
-  onInputChange = event => {
-    this.setState({ term: event.targetvalue });
+  onInputChange = (event) => {
+    this.setState({term: event.targetvalue})
   };
 
   onFormSubmit = event => {
-    event.preventDefault();
-    //TODO call callback from parent component
-  };
 
+  }
+
+
+ 
   render() {
     return (
-      <div className='search-bar ui segment'>
+      <div className='ui raised segment'>
+    
+
+        render() { 
+
         <form onSubmit={this.onFormSubmit} className='ui form'>
           <div className='field'>
             <label>Video Search</label>
@@ -23,11 +28,11 @@ class SearchBarVideo extends Component {
               type='text'
               value={this.state.term}
               onChange={this.onInputChange}
+          
             />
           </div>
         </form>
       </div>
-    );
   }
 }
 

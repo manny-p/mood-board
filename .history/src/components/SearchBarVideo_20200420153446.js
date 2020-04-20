@@ -8,10 +8,7 @@ class SearchBarVideo extends Component {
     this.setState({ term: event.targetvalue });
   };
 
-  onFormSubmit = event => {
-    event.preventDefault();
-    //TODO call callback from parent component
-  };
+  onFormSubmit = event => {};
 
   render() {
     return (

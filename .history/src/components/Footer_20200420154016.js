@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <div className='ui raised segment'>
       <div className='ui three item menu'>
-        <a href='http://localhost:3000/' className='active item'>
+        <a href='javascript:void(0)' className='active item'>
           Search
         </a>
-        <a href='http://localhost:3000/' className='item'>
+        <a href='javascript:void(0)' className='item'>
           Boards
         </a>
-        <a href='http://localhost:3000/' className='item'>
+        <a href='javascript:void(0)' className='item'>
           Library
         </a>
       </div>
