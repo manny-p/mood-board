@@ -6,9 +6,13 @@ import SearchBar from "./SearchBar";
 import SearchBarVideo from "./SearchBarVideo";
 import ImageList from "./ImageList";
 import Footer from "./Footer";
+import VideoList from "./VideoList";
 
 class App extends Component {
-  state = { images: [] };
+  state = {
+    images: [],
+    videos: []
+  };
 
   //*Search Images
   onSearchSubmit = async term => {
@@ -19,16 +23,18 @@ class App extends Component {
   };
 
   //*Search Videos
-  onTermSubmit = term => {
-    console.log(term);
-    youtube.get("/search", {
+  onTermSubmit = async term => {
+  
+    const repsonse = await youtube.get("/search", {
       params: {
         q: term,
         part: "snippet",
         maxResults: 5,
         type: "video",
-        key: "AIzaSyCU5F_mZMEJ6RzN-G1GUtPnPt0wzaTwFjc"
+        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
       }
+      
+      this.setState({videos: response.data.items});
     });
   };
 
@@ -41,6 +47,7 @@ class App extends Component {
           <ImageList images={this.state.images} />
           <div style={{ marginTop: "20px" }}>
             <SearchBarVideo onFormSubmit={this.onTermSubmit} />
+            <VideoList />
           </div>
           <div style={{ marginTop: "35px" }}>
             <Footer />

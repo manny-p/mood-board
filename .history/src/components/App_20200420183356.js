@@ -19,15 +19,15 @@ class App extends Component {
   };
 
   //*Search Videos
-  onTermSubmit = term => {
-    console.log(term);
-    youtube.get("/search", {
+  onTermSubmit = async term => {
+    // console.log(term);
+    const response = await youtube.get("/search", {
       params: {
         q: term,
         part: "snippet",
         maxResults: 5,
         type: "video",
-        key: "AIzaSyCU5F_mZMEJ6RzN-G1GUtPnPt0wzaTwFjc"
+        key: "AIzaSyD9aBmzhmrvBQE59b5TEcbF0tRr5xI6M2I"
       }
     });
   };
